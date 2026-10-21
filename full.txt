@@ -1,0 +1,170 @@
+$ php artisan test (Unit + Feature, against local Couchbase Server 8.0.1 with travel-sample)
+[2026-10-21 20:00:17] local.INFO: Upserting index: {"name":"hotel_search","type":"fulltext-index","sourceType":"gocbcore","sourceName":"travel-sample","planParams":{"indexPartitions":1,"numReplicas":0},"params":{"doc_config":{"docid_prefix_delim":"","docid_regexp":"","mode":"scope.collection.type_field","type_field":"type"},"mapping":{"analysis":{"analyzers":{"edge_ngram":{"token_filters":["to_lower","edge_ngram_2_8"],"tokenizer":"unicode","type":"custom"}},"token_filters":{"edge_ngram_2_8":{"back":false,"max":8,"min":2,"type":"edge_ngram"}}},"default_analyzer":"standard","default_datetime_parser":"dateTimeOptional","index_dynamic":false,"store_dynamic":false,"default_mapping":{"dynamic":true,"enabled":false},"types":{"inventory.hotel":{"dynamic":false,"enabled":true,"properties":{"title":{"enabled":true,"fields":[{"docvalues":true,"include_in_all":false,"include_term_vectors":false,"index":true,"name":"title","store":true,"type":"text"}]},"name":{"enabled":true,"fields":[{"docvalues":true,"include_in_all":false,"include_term_vectors":false,"index":true,"name":"name","store":true,"type":"text","analyzer":"edge_ngram"},{"docvalues":true,"include_in_all":false,"include_term_vectors":false,"index":true,"name":"name_keyword","store":false,"type":"text","analyzer":"keyword"}]},"description":{"enabled":true,"fields":[{"docvalues":true,"include_in_all":false,"include_term_vectors":false,"index":true,"name":"description","store":true,"type":"text","analyzer":"en"}]},"city":{"enabled":true,"fields":[{"docvalues":true,"include_in_all":false,"include_term_vectors":false,"index":true,"name":"city","store":true,"type":"text","analyzer":"keyword"}]},"state":{"enabled":true,"fields":[{"docvalues":true,"include_in_all":false,"include_term_vectors":false,"index":true,"name":"state","store":true,"type":"text","analyzer":"keyword"}]},"country":{"enabled":true,"fields":[{"docvalues":true,"include_in_all":false,"include_term_vectors":false,"index":true,"name":"country","store":true,"type":"text","analyzer":"keyword"}]}}}}}}}  
+[2026-10-21 20:00:17] local.WARNING: Search index already exists.  
+
+   WARN  Metadata found in doc-comment for method Tests\Feature\AirlineTest::it_can_get_list_of_airlines(). Metadata in doc-comments is deprecated and will no longer be supported in PHPUnit 12. Update your test code to use attributes instead.
+
+   WARN  Metadata found in doc-comment for method Tests\Feature\AirlineTest::it_returns_404_if_no_airlines_found(). Metadata in doc-comments is deprecated and will no longer be supported in PHPUnit 12. Update your test code to use attributes instead.
+
+   WARN  Metadata found in doc-comment for method Tests\Feature\AirlineTest::it_can_get_airline_by_id(). Metadata in doc-comments is deprecated and will no longer be supported in PHPUnit 12. Update your test code to use attributes instead.
+
+   WARN  Metadata found in doc-comment for method Tests\Feature\AirlineTest::it_returns_404_if_airline_not_found_by_id(). Metadata in doc-comments is deprecated and will no longer be supported in PHPUnit 12. Update your test code to use attributes instead.
+
+   WARN  Metadata found in doc-comment for method Tests\Feature\AirlineTest::it_can_create_a_new_airline(). Metadata in doc-comments is deprecated and will no longer be supported in PHPUnit 12. Update your test code to use attributes instead.
+
+   WARN  Metadata found in doc-comment for method Tests\Feature\AirlineTest::it_returns_422_when_creating_airline_with_invalid_data(). Metadata in doc-comments is deprecated and will no longer be supported in PHPUnit 12. Update your test code to use attributes instead.
+
+   WARN  Metadata found in doc-comment for method Tests\Feature\AirlineTest::it_can_update_an_existing_airline(). Metadata in doc-comments is deprecated and will no longer be supported in PHPUnit 12. Update your test code to use attributes instead.
+
+   WARN  Metadata found in doc-comment for method Tests\Feature\AirlineTest::it_can_create_a_new_airline_when_updating_non_existing_airline(). Metadata in doc-comments is deprecated and will no longer be supported in PHPUnit 12. Update your test code to use attributes instead.
+
+   WARN  Metadata found in doc-comment for method Tests\Feature\AirlineTest::it_returns_422_when_updating_airline_with_invalid_data(). Metadata in doc-comments is deprecated and will no longer be supported in PHPUnit 12. Update your test code to use attributes instead.
+
+   WARN  Metadata found in doc-comment for method Tests\Feature\AirlineTest::it_can_delete_an_airline(). Metadata in doc-comments is deprecated and will no longer be supported in PHPUnit 12. Update your test code to use attributes instead.
+
+   WARN  Metadata found in doc-comment for method Tests\Feature\AirlineTest::it_returns_404_if_airline_not_found_for_deletion(). Metadata in doc-comments is deprecated and will no longer be supported in PHPUnit 12. Update your test code to use attributes instead.
+
+   WARN  Metadata found in doc-comment for method Tests\Feature\AirlineTest::it_can_get_airlines_flying_to_a_specific_airport(). Metadata in doc-comments is deprecated and will no longer be supported in PHPUnit 12. Update your test code to use attributes instead.
+
+   WARN  Metadata found in doc-comment for method Tests\Feature\AirlineTest::it_returns_404_if_no_airlines_flying_to_a_specific_airport(). Metadata in doc-comments is deprecated and will no longer be supported in PHPUnit 12. Update your test code to use attributes instead.
+
+   WARN  Metadata found in doc-comment for method Tests\Feature\AirportTest::it_can_get_list_of_airports(). Metadata in doc-comments is deprecated and will no longer be supported in PHPUnit 12. Update your test code to use attributes instead.
+
+   WARN  Metadata found in doc-comment for method Tests\Feature\AirportTest::it_returns_404_if_no_airports_found(). Metadata in doc-comments is deprecated and will no longer be supported in PHPUnit 12. Update your test code to use attributes instead.
+
+   WARN  Metadata found in doc-comment for method Tests\Feature\AirportTest::it_can_get_airport_by_id(). Metadata in doc-comments is deprecated and will no longer be supported in PHPUnit 12. Update your test code to use attributes instead.
+
+   WARN  Metadata found in doc-comment for method Tests\Feature\AirportTest::it_returns_404_if_airport_not_found_by_id(). Metadata in doc-comments is deprecated and will no longer be supported in PHPUnit 12. Update your test code to use attributes instead.
+
+   WARN  Metadata found in doc-comment for method Tests\Feature\AirportTest::it_can_create_a_new_airport(). Metadata in doc-comments is deprecated and will no longer be supported in PHPUnit 12. Update your test code to use attributes instead.
+
+   WARN  Metadata found in doc-comment for method Tests\Feature\AirportTest::it_returns_422_when_creating_airport_with_invalid_data(). Metadata in doc-comments is deprecated and will no longer be supported in PHPUnit 12. Update your test code to use attributes instead.
+
+   WARN  Metadata found in doc-comment for method Tests\Feature\AirportTest::it_can_update_an_existing_airport(). Metadata in doc-comments is deprecated and will no longer be supported in PHPUnit 12. Update your test code to use attributes instead.
+
+   WARN  Metadata found in doc-comment for method Tests\Feature\AirportTest::it_can_create_a_new_airport_when_updating_non_existing_airport(). Metadata in doc-comments is deprecated and will no longer be supported in PHPUnit 12. Update your test code to use attributes instead.
+
+   WARN  Metadata found in doc-comment for method Tests\Feature\AirportTest::it_returns_422_when_updating_airport_with_invalid_data(). Metadata in doc-comments is deprecated and will no longer be supported in PHPUnit 12. Update your test code to use attributes instead.
+
+   WARN  Metadata found in doc-comment for method Tests\Feature\AirportTest::it_can_delete_an_airport(). Metadata in doc-comments is deprecated and will no longer be supported in PHPUnit 12. Update your test code to use attributes instead.
+
+   WARN  Metadata found in doc-comment for method Tests\Feature\AirportTest::it_returns_404_if_airport_not_found_for_deletion(). Metadata in doc-comments is deprecated and will no longer be supported in PHPUnit 12. Update your test code to use attributes instead.
+
+   WARN  Metadata found in doc-comment for method Tests\Feature\AirportTest::it_can_get_direct_flight_connections_from_a_target_airport(). Metadata in doc-comments is deprecated and will no longer be supported in PHPUnit 12. Update your test code to use attributes instead.
+
+   WARN  Metadata found in doc-comment for method Tests\Feature\AirportTest::it_returns_404_if_no_direct_flight_connections_found(). Metadata in doc-comments is deprecated and will no longer be supported in PHPUnit 12. Update your test code to use attributes instead.
+
+   WARN  Metadata found in doc-comment for method Tests\Feature\HotelTest::it_can_search_hotels_by_name(). Metadata in doc-comments is deprecated and will no longer be supported in PHPUnit 12. Update your test code to use attributes instead.
+
+   WARN  Metadata found in doc-comment for method Tests\Feature\HotelTest::it_returns_empty_when_no_hotels_match_name(). Metadata in doc-comments is deprecated and will no longer be supported in PHPUnit 12. Update your test code to use attributes instead.
+
+   WARN  Metadata found in doc-comment for method Tests\Feature\HotelTest::it_can_search_hotels_by_partial_name(). Metadata in doc-comments is deprecated and will no longer be supported in PHPUnit 12. Update your test code to use attributes instead.
+
+   WARN  Metadata found in doc-comment for method Tests\Feature\HotelTest::it_returns_422_when_searching_without_name(). Metadata in doc-comments is deprecated and will no longer be supported in PHPUnit 12. Update your test code to use attributes instead.
+
+   WARN  Metadata found in doc-comment for method Tests\Feature\HotelTest::it_can_filter_hotels_by_exact_attributes(). Metadata in doc-comments is deprecated and will no longer be supported in PHPUnit 12. Update your test code to use attributes instead.
+
+   WARN  Metadata found in doc-comment for method Tests\Feature\HotelTest::it_returns_empty_when_no_hotels_match_filter(). Metadata in doc-comments is deprecated and will no longer be supported in PHPUnit 12. Update your test code to use attributes instead.
+
+   WARN  Metadata found in doc-comment for method Tests\Feature\HotelTest::it_can_filter_hotels_by_multiple_attributes(). Metadata in doc-comments is deprecated and will no longer be supported in PHPUnit 12. Update your test code to use attributes instead.
+
+   WARN  Metadata found in doc-comment for method Tests\Feature\HotelTest::it_can_filter_hotels_with_offset_and_limit(). Metadata in doc-comments is deprecated and will no longer be supported in PHPUnit 12. Update your test code to use attributes instead.
+
+   WARN  Metadata found in doc-comment for method Tests\Feature\RouteTest::it_can_get_list_of_routes(). Metadata in doc-comments is deprecated and will no longer be supported in PHPUnit 12. Update your test code to use attributes instead.
+
+   WARN  Metadata found in doc-comment for method Tests\Feature\RouteTest::it_returns_404_if_no_routes_found(). Metadata in doc-comments is deprecated and will no longer be supported in PHPUnit 12. Update your test code to use attributes instead.
+
+   WARN  Metadata found in doc-comment for method Tests\Feature\RouteTest::it_can_get_route_by_id(). Metadata in doc-comments is deprecated and will no longer be supported in PHPUnit 12. Update your test code to use attributes instead.
+
+   WARN  Metadata found in doc-comment for method Tests\Feature\RouteTest::it_returns_404_if_route_not_found_by_id(). Metadata in doc-comments is deprecated and will no longer be supported in PHPUnit 12. Update your test code to use attributes instead.
+
+   WARN  Metadata found in doc-comment for method Tests\Feature\RouteTest::it_can_create_a_new_route(). Metadata in doc-comments is deprecated and will no longer be supported in PHPUnit 12. Update your test code to use attributes instead.
+
+   WARN  Metadata found in doc-comment for method Tests\Feature\RouteTest::it_returns_422_when_creating_route_with_invalid_data(). Metadata in doc-comments is deprecated and will no longer be supported in PHPUnit 12. Update your test code to use attributes instead.
+
+   WARN  Metadata found in doc-comment for method Tests\Feature\RouteTest::it_can_update_an_existing_route(). Metadata in doc-comments is deprecated and will no longer be supported in PHPUnit 12. Update your test code to use attributes instead.
+
+   WARN  Metadata found in doc-comment for method Tests\Feature\RouteTest::it_can_create_a_new_route_when_updating_non_existing_route(). Metadata in doc-comments is deprecated and will no longer be supported in PHPUnit 12. Update your test code to use attributes instead.
+
+   WARN  Metadata found in doc-comment for method Tests\Feature\RouteTest::it_returns_422_when_updating_route_with_invalid_data(). Metadata in doc-comments is deprecated and will no longer be supported in PHPUnit 12. Update your test code to use attributes instead.
+
+   WARN  Metadata found in doc-comment for method Tests\Feature\RouteTest::it_can_delete_a_route(). Metadata in doc-comments is deprecated and will no longer be supported in PHPUnit 12. Update your test code to use attributes instead.
+
+   WARN  Metadata found in doc-comment for method Tests\Feature\RouteTest::it_returns_404_if_route_not_found_for_deletion(). Metadata in doc-comments is deprecated and will no longer be supported in PHPUnit 12. Update your test code to use attributes instead.
+
+   PASS  Tests\Unit\ExampleTest
+  ✓ that true is true
+[2026-10-21 20:00:18] testing.ERROR: Error finding airline: document_not_found (101): "unable to execute KV operation "document_get""  
+[2026-10-21 20:00:18] testing.INFO: Updating airline {"id":"airline_6ad919d2859c2","data":{"callsign":"AA","country":"USA","iata":"AA","icao":"AAL","name":"American Airlines"}} 
+[2026-10-21 20:00:18] testing.INFO: Updating airline {"id":"airline_6ad919d28aa65","data":{"callsign":"AA","country":"USA","iata":"AA","icao":"AAL","name":"American Airlines"}} 
+[2026-10-21 20:00:18] testing.ERROR: Error finding airline: document_not_found (101): "unable to execute KV operation "document_get""  
+[2026-10-21 20:00:18] testing.ERROR: Error finding airline: document_not_found (101): "unable to execute KV operation "document_get""  
+
+   PASS  Tests\Feature\AirlineTest
+  ✓ it can get list of airlines                                          0.31s  
+  ✓ it returns 404 if no airlines found                                  0.03s  
+  ✓ it can get airline by id                                             0.03s  
+  ✓ it returns 404 if airline not found by id                            0.04s  
+  ✓ it can create a new airline                                          0.04s  
+  ✓ it returns 422 when creating airline with invalid data               0.03s  
+  ✓ it can update an existing airline                                    0.02s  
+  ✓ it can create a new airline when updating non existing airline       0.02s  
+  ✓ it returns 422 when updating airline with invalid data               0.02s  
+  ✓ it can delete an airline                                             0.02s  
+  ✓ it returns 404 if airline not found for deletion                     0.02s  
+  ✓ it can get airlines flying to a specific airport                     1.03s  
+  ✓ it returns 404 if no airlines flying to a specific airport           0.87s  
+[2026-10-21 20:00:20] testing.ERROR: Error finding airport: document_not_found (101): "unable to execute KV operation "document_get""  
+[2026-10-21 20:00:20] testing.INFO: Updating airport {"id":"airport_6ad919d4ac501","data":{"airportname":"John F. Kennedy International Airport","city":"New York","country":"USA","faa":"JFK","icao":"KJFK","tz":"America/New_York","geo":{"lat":40.6413,"lon":-73.7781,"alt":13}}} 
+[2026-10-21 20:00:20] testing.INFO: Updating airport {"id":"airport_6ad919d4b0eee","data":{"airportname":"John F. Kennedy International Airport","city":"New York","country":"USA","faa":"JFK","icao":"KJFK","tz":"America/New_York","geo":{"lat":40.6413,"lon":-73.7781,"alt":13}}} 
+[2026-10-21 20:00:20] testing.ERROR: Error finding airport: document_not_found (101): "unable to execute KV operation "document_get""  
+[2026-10-21 20:00:20] testing.ERROR: Error finding airport: document_not_found (101): "unable to execute KV operation "document_get""  
+[2026-10-21 20:00:21] testing.INFO: ["DEL","LHR","EZE","ATL","CUN","MEX","LAX","SAN","SEA","SFO"]  
+
+   PASS  Tests\Feature\AirportTest
+  ✓ it can get list of airports                                          0.07s  
+  ✓ it returns 404 if no airports found                                  0.02s  
+  ✓ it can get airport by id                                             0.02s  
+  ✓ it returns 404 if airport not found by id                            0.02s  
+  ✓ it can create a new airport                                          0.02s  
+  ✓ it returns 422 when creating airport with invalid data               0.02s  
+  ✓ it can update an existing airport                                    0.02s  
+  ✓ it can create a new airport when updating non existing airport       0.02s  
+  ✓ it returns 422 when updating airport with invalid data               0.02s  
+  ✓ it can delete an airport                                             0.02s  
+  ✓ it returns 404 if airport not found for deletion                     0.02s  
+  ✓ it can get direct flight connections from a target airport           0.60s  
+  ✓ it returns 404 if no direct flight connections found                14.30s  
+
+   PASS  Tests\Feature\ExampleTest
+  ✓ the application returns a successful response                        0.07s  
+
+   PASS  Tests\Feature\HotelTest
+  ✓ it can search hotels by name                                         0.03s  
+  ✓ it returns empty when no hotels match name                           0.02s  
+  ✓ it can search hotels by partial name                                 0.02s  
+  ✓ it returns 422 when searching without name                           0.01s  
+  ✓ it can filter hotels by exact attributes                             0.02s  
+  ✓ it returns empty when no hotels match filter                         0.02s  
+  ✓ it can filter hotels by multiple attributes                          0.02s  
+  ✓ it can filter hotels with offset and limit                           0.02s  
+[2026-10-21 20:00:36] testing.ERROR: Error finding route: document_not_found (101): "unable to execute KV operation "document_get""  
+[2026-10-21 20:00:36] testing.ERROR: Error finding route: document_not_found (101): "unable to execute KV operation "document_get""  
+[2026-10-21 20:00:36] testing.ERROR: Error finding route: document_not_found (101): "unable to execute KV operation "document_get""  
+
+   PASS  Tests\Feature\RouteTest
+  ✓ it can get list of routes                                            0.05s  
+  ✓ it returns 404 if no routes found                                    0.02s  
+  ✓ it can get route by id                                               0.02s  
+  ✓ it returns 404 if route not found by id                              0.02s  
+  ✓ it can create a new route                                            0.02s  
+  ✓ it returns 422 when creating route with invalid data                 0.02s  
+  ✓ it can update an existing route                                      0.02s  
+  ✓ it can create a new route when updating non existing route           0.02s  
+  ✓ it returns 422 when updating route with invalid data                 0.02s  
+  ✓ it can delete a route                                                0.02s  
+  ✓ it returns 404 if route not found for deletion                       0.02s  
+
+  Tests:    47 passed (441 assertions)
+  Duration: 18.24s
+

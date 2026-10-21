@@ -1,0 +1,23 @@
+$ php -v
+PHP 8.5.12 (cli) (built: Oct 21 2026 15:48:53) (NTS)
+Copyright (c) The PHP Group
+Built by https://github.com/docker-library/php
+Zend Engine v4.5.12, Copyright (c) Zend Technologies
+    with Zend OPcache v8.5.12, Copyright (c), by Zend Technologies
+$ php -m | grep -i '^couchbase$'
+couchbase
+$ php --ri couchbase (head)
+
+couchbase
+
+couchbase => enabled
+couchbase_extension_abi => unspecified
+couchbase_extension_version => 4.5.0
+$ php artisan test --testsuite=Unit
+
+   PASS  Tests\Unit\ExampleTest
+  ✓ that true is true
+
+  Tests:    1 passed (1 assertions)
+  Duration: 0.08s
+

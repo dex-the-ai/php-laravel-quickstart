@@ -1,0 +1,13 @@
+$ curl -s -o /dev/null -w "%{http_code} %{content_type}\n" http://localhost:8000/api/documentation
+200 text/html; charset=utf-8
+$ curl -s http://localhost:8000/api/documentation | grep -o "<title>.*</title>"
+<title>Quickstart in Couchbase with PHP and Laravel</title>
+$ curl -s "http://localhost:8000/api/v1/airlines/airline_10"
+{"name":"40-Mile Air","iata":"Q5","icao":"MLA","callsign":"MILE-AIR","country":"United States"}
+HTTP 200
+$ curl -s "http://localhost:8000/api/v1/airports/list?limit=1"
+[{"airport":{"airportname":"Calais Dunkerque","city":"Calais","country":"France","faa":"CQF","geo":{"alt":12,"lat":50.962097,"lon":1.954764},"icao":"LFAC","id":1254,"type":"airport","tz":"Europe\/Paris"}}]
+HTTP 200
+$ curl -s "http://localhost:8000/api/v1/hotels/autocomplete?name=sea"
+[{"city":"Na h-Eileanan an Iar","country":"United Kingdom","description":"Offers 1 family room, sleeping up to four (with private bath). Panoramic views of sea, mountains and basking seals.","name":"Seal View","title":"Berneray"},{"city":"San Francisco","country":"United States","description":"Nestl
+HTTP 200
